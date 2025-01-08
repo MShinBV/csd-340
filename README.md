@@ -5,5 +5,5 @@ Web Development with HTML and CSS
 
 ## Contributors
 
-..* Nathan Braun
-..* Miles Shinsato
+  * Nathan Braun
+  * Miles Shinsato
