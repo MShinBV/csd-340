@@ -1,0 +1,54 @@
+/* Global Styles */
+html, body {
+    font-size: 16px;
+}
+
+/* Header Styles */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* Paragraph Styles */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* Custom Classes */
+.intro {
+    text-indent: 2em;
+}
+
+.sentence {
+    font-style: italic;
+}
+
+/* Address Section */
+address {
+    text-align: center;
+}
+
+/* Link Styles */
+a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+a:visited {
+    color: #7A5C99; /* Example visited color */
+}
