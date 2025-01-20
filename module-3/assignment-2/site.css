@@ -1,0 +1,33 @@
+/* Miles Shinsato, 01/19/2025, Module 3.2 Assignment */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: rgba(15, 49, 104, 0.61);
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    padding: 10px;
+}
+
+a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:visited {
+    color: #800080;
+}
