@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Side-by-Side Divs */
+#side-by-side {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.side-div {
+    width: 45%;
+    padding: 15px; /* Add padding to ensure content isn't touching the border */
+    border-radius: 15px;
+
+}
+
+/* Headings Styling */
+h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Ordered List Styling */
+ol {
+    list-style: decimal inside;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Unordered List Styling */
+ul {
+    list-style: upper-roman inside;
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Bottom Div */
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+}
+
+#bottom-div a {
+    float: right;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#bottom-div a:hover {
+    text-decoration: underline;
+}
