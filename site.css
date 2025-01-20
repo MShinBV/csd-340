@@ -7,13 +7,16 @@ body {
 }
 
 #container {
-    margin: 50px 100px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #2E2E2E;
 }
 
 h1, h2, h3, h4 {
-    background-color: #FFD700;
-    color: #000000;
-    border: 1px solid #D6A800;
+    background-color: rgba(15, 49, 104, 0.61);
+    color: #ffffff;
+    border: 1px solid #ff0000;
     padding: 10px;
 }
 
