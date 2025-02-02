@@ -1,3 +1,6 @@
+/* Miles Shinsato, 02/02/2025, Assignment 6.2 - Building a Webpage Exercise Part 5 */
+
+
 /* Header Styling */
 header {
     background-color: #333;
@@ -13,6 +16,7 @@ header {
     border-bottom: 15px solid #888;
 }
 
+/* Styles the individual links inside the navbar */
 #navbar a {
     float: left;
     display: block;
@@ -22,6 +26,7 @@ header {
     text-decoration: none;
 }
 
+/* Changes link styles when hovered over */
 #navbar a:hover {
     background-color: #555;
     color: yellow;
@@ -37,24 +42,33 @@ header {
 
 /* Card Styling */
 .card {
+
+    /* Adding shadow over box*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    /* Adding transition effect*/
     transition: 0.3s;
     width: 50%;
     background-color: #fff;
     padding: 15px;
 }
 
+/* Adding a stronger shadow when hovering over card */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Card title styling */
 .card-title {
     text-align: center;
+
+    /* Making the font larger*/
     font-size: 2em;
     color: #444;
     font-weight: 400;
 }
 
+/* Adding padding inside the card content */
 .card-content {
     padding: 2px 16px;
 }
@@ -70,6 +84,7 @@ footer {
     box-sizing: border-box;
 }
 
+/* Adding style for the paragraph (link to landing page) */
 footer p {
     color: white;
     font-weight: 400;
@@ -78,11 +93,13 @@ footer p {
     font-style: italic;
 }
 
+/* Style for the links inside the footer */
 footer a {
     text-decoration: none;
     color: white;
 }
 
+/* Adding underling when hovering over footer links */
 footer a:hover {
     text-decoration: underline;
 }
