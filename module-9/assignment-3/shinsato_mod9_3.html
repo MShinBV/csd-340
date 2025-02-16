@@ -1,0 +1,48 @@
+<!-- Miles Shinsato, 02/16/2025, CSD340-A339, 9.3 Assignment - JavaScript Exercise, Part 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <!-- Declaring JavaScript Variables to store words for the blanks in the speech -->
+    <script>
+        var firstVariableValue = "Gondor";
+        var secondVariableValue = "courage";
+        var thirdVariableValue = "wolves";
+        var fourthVariableValue = "Earth";
+    </script>
+</head>
+
+<body>
+<!-- Title of the Speech -->
+<h1>King Aragorn's Speech (Lord of the Rings: Return of the King, 2003)</h1>
+
+<!-- First paragraph with blank span to be replaced by Javascript -->
+<p><b>HOLD</b> your ground!</p>
+<p><b>HOLD</b> your ground!</p>
+<p>Sons of <span id="Gondor">______</span>, of <u>Rohan,</u> my brothers. I see in your eyes the same <i>fear</i> that would take the heart of me.</p>
+
+<!-- Second paragraph with blank span to be replaced by Javascript -->
+<p>A  day may come when the <span id="courage">_______</span> of men <i>fails,</i> when we <i>forsake</i> our friends and break all bonds of fellowship, but it is <u>not this day.</u></p>
+
+<!-- Third paragraph with blank span to be replaced by Javascript -->
+<p>An hour of <span id="wolves">______</span> and shattered shields, when the age of men comes crashing down, <u>but it is not this day!</u></p>
+
+<!-- Final paragraph with blank span to be replaced by Javascript -->
+<p>This day we <b>FIGHT!</b></p>
+<p>By all that you hold dear on this good <span id="Earth">_____</span>, I bid you stand, <b><u>Men of the West!</u></b> </p>
+
+<!-- Buttons set to update with corresponding word -->
+<button type="button" onclick="document.getElementById('Gondor').innerHTML = firstVariableValue">Gondor</button><br/>
+
+<button type="button" onclick="document.getElementById('courage').innerHTML = secondVariableValue">courage</button><br/>
+
+<button type="button" onclick="document.getElementById('wolves').innerHTML = thirdVariableValue">wolves</button><br/>
+
+<button type="button" onclick="document.getElementById('Earth').innerHTML = fourthVariableValue">Earth</button><br/>
+
+</body>
+</html>
