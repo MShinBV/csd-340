@@ -1,0 +1,58 @@
+<!-- Miles Shinsato, 02/23/2025, Mod 10.3 Assignment -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 - JavaScript Events</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Play a sound when an image is clicked
+        function playSound(soundSrc) {
+            let audio = new Audio(soundSrc);
+            audio.play();
+        }
+
+        // Change the image when hovered over
+        function previewImage(img, newSrc) {
+            img.dataset.original = img.src;
+            img.src = newSrc;
+        }
+
+        // Restore the original image when the mouse leaves
+        function resetImage(img) {
+            img.src = img.dataset.original;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Assignment 10.3: JavaScript Event Handling</h1>
+<h2>Hover over an image to see it change. </br> Click it to play a sound!</h2>
+
+<br>
+
+<!-- Thumbnails with hover and click effects -->
+<img src="/images/image1.jpg" alt="Thumbnail 1" class="thumbnail"
+     onclick="playSound('/sounds/image1.mp3')"
+     onmouseover="previewImage(this, '/images/image1-hover.jpg')"
+     onmouseout="resetImage(this)">
+<p> This is when I remember it's Sunday and assignments are due.</p>
+
+<img src="/images/image2.png" alt="Thumbnail 2" class="thumbnail"
+     onclick="playSound('/sounds/image2.mp3')"
+     onmouseover="previewImage(this, '/images/image2-hover.png')"
+     onmouseout="resetImage(this)">
+<p> This is how I feel when I finally am ready to get my assignments done.</p>
+
+<img src="/images/image3.png" alt="Thumbnail 3" class="thumbnail"
+     onclick="playSound('/sounds/image3.mp3')"
+     onmouseover="previewImage(this, '/images/image3-hover.png')"
+     onmouseout="resetImage(this)">
+<p> This is me when I am getting assignments done on time despite starting late.</p>
+
+</body>
+</html>

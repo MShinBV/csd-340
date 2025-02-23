@@ -1,0 +1,35 @@
+/* Miles Shinsato, 02/23/2025, 10.3 Assignment */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size:3em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+/* Thumbnail styles */
+.thumbnail {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect on hover */
+.thumbnail:hover {
+    transform: scale(1.1);
+}
