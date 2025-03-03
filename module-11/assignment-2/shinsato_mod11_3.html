@@ -1,0 +1,128 @@
+<!-- Miles Shinsato, 03/02/2025, CSD340-A339, Assignment 11.2 - JavasScript Excercise Part 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+
+<!-- Text Explanation of what the page will due and its functions -->
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+<h2>This is an interactive To-Do List.</h2>
+<p>Type your first item in the text box, then click "Add." This will add it to the bottom of the list<br>
+    Click the "Display" button to see current items in the list.<br>
+    Note, this will also toggle the list to show or hide.<br>
+    Click on "Delete Last Entry" if you'd like to remove the last entry input.</p>
+
+<!-- Input field to enter the tasks to add to list -->
+<label for="toDoInput">Enter Task:</label>
+<input type="text" id="toDoInput" placeholder="Enter a task here">
+
+<!-- Button setup for the different onclick functions -->
+<button onclick="addItem()">Add</button>
+<button onclick="deleteLastItem()">Delete Last Entry</button>
+<button onclick="toggleListVisibility()">Display</button>
+
+<!-- Using unordered list since the script will assign each task a number -->
+<ul id="toDoList"></ul>
+
+<script>
+
+    // Array to store to-do list items
+    let toDoArray = [];
+
+    // Boolean flag to track if list is visible or not
+    let isListVisible = true;
+
+    // Function to add task to do list
+    function addItem() {
+        let inputElement = document.getElementById("toDoInput");
+
+        // Adding to remove leading / trailing spaces on input
+        let newItem = inputElement.value.trim();
+
+        // Check that input is not empty
+        if (newItem !== "") {
+            toDoArray.push(newItem);
+
+            // Alert after adding to to-do list
+            alert(`Task: ${newItem} Added as Item ${toDoArray.length}`);
+
+            // Clear input fields out after entry
+            inputElement.value = "";
+            displayToDoList();
+        } else {
+
+            // Alert error message for blank inputs
+            alert("A blank input is not valid.\nPlease enter a task into the input field.");
+        }
+    }
+
+    // Function to remove last task from the to-do list
+    function deleteLastItem() {
+        if (toDoArray.length > 0) {
+
+            // Remove the last item for the array
+            toDoArray.pop();
+
+            // Alert message for successful removal from bottom of list
+            alert("The last item on the to-do list has been deleted.");
+            displayToDoList();
+        } else {
+
+            // Alert message if there is no items to delete
+            alert("There are no items left to delete.");
+        }
+    }
+
+    // Function to show the to-do list
+    function displayToDoList() {
+        let listElement = document.getElementById("toDoList");
+        listElement.innerHTML = "";
+
+        // Hide to-do list if it is empty
+        if (toDoArray.length === 0) {
+            listElement.style.display = "none";
+
+        // Show to-do list if there are items on it
+        } else {
+            listElement.style.display = "block";
+
+            // Loop through the array and create to-do list items
+            toDoArray.forEach((item, index) => {
+                let listItem = document.createElement("li");
+                listItem.textContent = `Task #${index + 1}: ${item}`;
+                listElement.appendChild(listItem);
+            });
+        }
+    }
+
+    // Function to toggle the to-do list visibility
+    function toggleListVisibility() {
+        let listElement = document.getElementById("toDoList");
+        let button = document.querySelector("button[onclick='toggleListVisibility()']");
+
+        // If the to-do list is empty, show an alert to say the to-do list is empty
+        if (toDoArray.length === 0) {
+            alert("There is no list to display.");
+            return;
+        }
+
+        // Adding if/else to toggle the list visibility and update button text correctly
+        if (isListVisible) {
+            listElement.style.display = "none";
+            button.textContent = "Show List";
+        } else {
+            listElement.style.display = "block";
+            button.textContent = "Hide List";
+        }
+
+        // Toggle visibility flag
+        isListVisible = !isListVisible;
+    }
+</script>
+</body>
+</html>
