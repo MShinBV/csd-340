@@ -1,0 +1,63 @@
+/* Miles Shinsato, 03/03/2025, CSD-340-A339, Assignment 12.2 - JavaScript Exercise - Part 4 */
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Flexbox container to align the two sections side by side */
+#container {
+    /* Use flexbox layout */
+    display: flex;
+    justify-content: center;
+    /* Add space between the left and right sections */
+    gap: 50px;
+}
+
+/* General box styling */
+#left, #right {
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Solid border for the first box (left side) */
+#left {
+    border: 2px solid red; /* Solid red border for the left box */
+}
+
+/* Dotted border for the second box (right side) */
+#right {
+    border: 2px dotted red; /* Dotted red border for the right box */
+}
+
+/* Button styling */
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Styling for the link back to the landing page */
+a {
+    /* Make the link block-level, so it takes up the full width */
+    display: block;
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    /* Underline the link when hovered over */
+    text-decoration: underline;
+}
+
+/* Style for Roman numerals in the list */
+#roman {
+    /* Display list items as Roman numerals (I, II, III, ...) */
+    list-style-type: upper-roman;
+    text-align: left;
+}

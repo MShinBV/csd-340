@@ -1,0 +1,116 @@
+<!-- Miles Shinsato, 03/03/2025, CSD-340-A339, Assignment 12.2 - JavaScript Exercise - Part 4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script>
+        // Array of books
+        const tasks = [
+            "House of Leaves", "Orion", "New Moon", "Mistborn", "The Hobbit",
+            "Animal Farm", "The Return of the King", "Dune", "Jurassic Park", "Angels & Demons"
+        ];
+
+        // Function to create and display the book list
+        function countBooks(direction) {
+            clearBox("books");
+
+            // Create an unordered list element
+            const myList = document.createElement("ul");
+
+            // Start counter from 1 or 10 based on direction
+
+            let counter = direction === "up" ? 1 : 10;
+
+            // Set the end condition for the loop
+            const range = direction === "up" ? tasks.length : -1;
+
+            // Decide whether to increment or decrement counter
+            const step = direction === "up" ? 1 : -1;
+
+            // Decide where to start (first or last item)
+            const start = direction === "up" ? 0 : tasks.length - 1;
+
+            // Loop through the array and create list items
+            for (let i = start; i !== range; i += step) {
+
+                // Create a list item for each book
+                const newItem = document.createElement("li");
+
+                // Format the counter with the book name
+                const arrayValue = `${counter}. ${tasks[i]}`;
+
+                // Create a text node for the list item
+                const textNode = document.createTextNode(arrayValue);
+
+                // Append the text to the list item
+                newItem.appendChild(textNode);
+
+                // Append the list item to the list
+                myList.appendChild(newItem);
+
+                // Increment or decrement the counter
+                counter += direction === "up" ? 1 : -1;
+            }
+            document.getElementById("books").appendChild(myList);
+        }
+
+        // Function to clear any previous content from a given element
+        function clearBox(elementID) {
+            const div = document.getElementById(elementID);
+            while (div.firstChild) {
+
+                // Remove all child nodes (clears the content)
+                div.removeChild(div.firstChild);
+            }
+        }
+
+        // Event listener for the page load
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Add event listeners to buttons to count books up or down when clicked
+            document.getElementById("countDown").addEventListener("click", () => countBooks('down'));
+            document.getElementById("countUp").addEventListener("click", () => countBooks('up'));
+
+            // Display the book list initially when the page loads
+            countBooks('up');
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>Assignment 12.2: JavaScript - Part 4</h1> <!-- Page header -->
+</header>
+
+<section id="container">
+    <article id="left">
+        <h3>Top 10 Favorite Books</h3>
+        <button id="countDown">Count Down</button>
+        <button id="countUp">Count Up</button>
+        <div id="books"></div>
+    </article>
+
+    <aside id="right">
+        <h3>5 Things I’ve Learned</h3>
+
+        <!-- Unordered list displayed in Roman numerals -->
+        <ul id="roman">
+            <li>How HTML and CSS work together</li>
+            <li>JavaScript integration into HTML</li>
+            <li>Theming a web page with color schemes</li>
+            <li>Utilizing CSS to format a web page</li>
+            <li>Usage of various formatting tools on a webpage</li>
+        </ul>
+    </aside>
+</section>
+
+<footer>
+    <p>
+        <a href="https://mshinbv.github.io/csd-340/index.html">Back to Landing Page</a>
+    </p>
+</footer>
+</body>
+</html>
